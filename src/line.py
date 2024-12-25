@@ -1,4 +1,4 @@
-from tkinter import Canvas
+
 class Line():
     def __init__(self, p1, p2):
         self.p1 = p1
