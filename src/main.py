@@ -5,9 +5,14 @@ from cell import Cell
 from maze import Maze
 
 def main():
-    win = Window(800, 600)
+    num_rows = 16
+    num_cols = 16
+    x_size = 25
+    y_size = 25
+    win = Window((num_rows * y_size) + 20, (num_cols * x_size) + 20)
 
-    maze = Maze(10, 10 , 10, 10, 50, 50, win)
+    maze = Maze(10, 10 , num_rows, num_cols, x_size, y_size, win)
+    maze.solve()
     win.wait_for_close()
 
 main()
